@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Печать фотографий</title>
+  </head>
+  <body>
+    <section>
+      <div>
+        <h1>Печать фотографий</h1>
+
+        <div class="container">
+          <div class="column-1">
+            <h5>Формат</h5>
+            <div><input type="radio" name="option" value="9x12" class="options" required />9x12</div>
+            <div><input type="radio" name="option" value="10x15" class="options" required />10x15</div>
+            <div><input type="radio" name="option" value="18x24" class="options" required />18x24</div>
+            <div>
+              Количество
+              <input
+                class="calcular"
+                type="text"
+                name=""
+                id=""
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+              />
+            </div>
+          </div>
+          <div class="column-2">
+            <h5>Бумага</h5>
+            <div><input type="radio" name="option2" value="Матовая" class="options" required />Матовая</div>
+            <div><input type="radio" name="option2" value="Глянцевая" class="options" required />Глянцевая</div>
+            <button class="boton">Вычислить</button>
+          </div>
+          <div class="resultados"><textarea cols="50" rows="5"></textarea></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      ТюмГУ | Магистратура | Прикладная Информатика| 1-й Семестр | РКЧИС | <b>Портильо Мачадо Ронни Давид</b> |
+      <b>Лаб 8</b> |
+      <script>
+        document.write(new Date().getFullYear());
+      </script>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
